@@ -1,0 +1,26 @@
+<div class="py-4">
+    <div class="container position-relative">
+        <div class="row">
+            <div *ngFor="let person of person" class="col-md-2  position-relative   card-group ">
+                <a  [routerLink]="['/details',person.id,mediaType]">
+                    <div class=" card-img  ">
+                        <img src={{imgeUrl+person.profile_path}}  class="img-fluid rounded-4 " alt="">
+                     </div>
+                     <div class="card-img-bottom container">
+                         <p>{{person.name}}</p>
+                        </div>
+                </a>
+    
+    
+    
+            </div>
+    
+        </div>
+    </div>
+    <div class="">
+        <div class="position-absolute end-0 m-5 d-none">
+            <button class="btn btn-info "> <i class="fa fa-arrow-up text-white"></i></button>
+        </div>
+    </div>
+    
+</div>

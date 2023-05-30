@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'animate.css';
+body
+{
+    background-color: var(--bg-color);
+
+    color: var(--font-color) !important;
+}
+
+
+a
+{
+
+    text-decoration: none;
+    color: var(--font-color) !important;
+}
+
+.monster
+{
+    font-family:MONSTER;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+@font-face
+{
+    font-family: 'MONSTER';
+    src:url('assets/JollyLodger-Regular.ttf');
+}
+
+:root
+{
+    --bg-color:rgba(0, 0, 28, 0.966);
+    --font-color: white;
+}
+
+.nav
+{
+    background-color: var(--bg-color);    
+}
+
+.nac-c
+{
+    color:var(--font-color);
+}
+
+.nac-c a:hover
+{
+    background-color: white;
+    color: black !important;
+    
+}
+
+.nav-link
+{
+    color:var(--font-color) !important;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+.lougout
+{
+    background-color: red;
+
+}
+
+
+.monster h1,h2
+{
+    font-size: 65px;
+}
+
+.animate__animated.animate__backInDown {
+    --animate-duration: 1.5s ;
+  
+}
+
+
+.trending
+{
+    border:2px white solid ;
+    text-align: center;
+}
+
+.btn_hover:hover
+{
+    background-color:var(--font-color);  
+    color: black;  
+}
+
+.nav-link:active
+{
+    background-color: #0dcaf0 !important;
+}

@@ -1,0 +1,85 @@
+
+
+
+<div class="container py-lg-5 position-relative">
+    <div class="container py-lg-5">
+        <div class="row  shadow" >
+            <div class="col-md-3">
+                    <img class="img-fluid rounded-3" *ngIf="details.profile_path"[src]="imgeUrl+details.profile_path">
+                    <img class="img-fluid rounded-3" *ngIf="details.poster_path"[src]="imgeUrl+details.poster_path" >
+            </div>
+            <div class="col-md-9 align-items-center d-flex">
+                <div class="">
+                    <h3 *ngIf="details.title">{{details.title}}  
+                       <span *ngIf="details.release_date" class="text-muted">({{details.release_date.slice(0,4)}})</span> 
+                       <div *ngIf="details.vote_average"><i class="fa fa-star text-warning"></i>{{details.vote_average.toFixed(1)}}</div>
+                        </h3>
+                        <h3 *ngIf="details.name">{{details.name}}  
+                            <span *ngIf="details.first_air_date" class="text-muted">({{details.first_air_date.slice(0,4)}})</span> 
+                            <div *ngIf="details.vote_average"><i class="fa fa-star text-warning"></i>{{details.vote_average.toFixed(1)}}</div>
+                             </h3>
+                        <div class="d-flex m-1">
+                            <div  *ngIf="details.birthday">BirthdaY:  {{details.birthday}}</div>
+                            <div  *ngIf="details.first_air_date">{{details.first_air_date}}</div>
+                            <div class="" *ngFor="let geneer of genres">
+                                <span class="p-2"> {{geneer.name}}  </span>
+                            </div>
+                        </div>
+                    <div class="py-2 ">
+                    <h4>Overview</h4>
+                    <span class="text-muted">{{details.tagline}}</span>
+                    <p class="text-muted">{{details.overview}} {{details.biography}}</p>
+                    </div>
+                    <a *ngIf="details.poster_path " [href]="youtubeUrl+keywatch"  class="py-4 " >
+                        <button class="btn btn-info btn_hover "><i class="fa-brands fa-youtube"></i> Play Trailler </button>
+                    </a>
+               
+    
+            
+                 
+    
+    
+    
+    
+    
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+    
+    
+    
+    <div class="container ">
+        <div class="row ">
+            <h3 *ngIf="details.title"> Similar Movies </h3>
+            <h3 *ngIf="details.name && details.poster_path"> Similar tv shows </h3>
+            <div   *ngFor="let items of similar" class="col-md-2  position-relative  card-group ">
+                 
+    
+                    <a [routerLink]="['/details',items.id,media_type]" >
+                        <div   (click)="otherDetails(media_type,items.id)">
+                            <div  class=" card-img   ">
+                                <img src={{imgeUrl+items.poster_path}}  class="img-fluid rounded-4 " alt="">
+                             </div>
+                             <div class="card-img-bottom container">
+                                 <p>{{items.title}}{{items.name}}</p>
+                                 <div class=" position-absolute top-0  ">
+                                     <p> <i class="fa fa-star text-warning"></i>{{items.vote_average.toFixed(1)}}</p>
+                                 </div>
+                    
+                                </div>
+                        </div> 
+                    </a>
+                
+                        
+            
+            
+            
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

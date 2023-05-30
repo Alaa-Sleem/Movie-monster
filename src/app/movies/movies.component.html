@@ -1,0 +1,38 @@
+<div class="container position-relative">
+ <div class="justify-content-center mt-5">
+    <div  class="row">
+        <div *ngFor="let movie of pagea" class="col-md-2  position-relative   card-group ">
+            <a  [routerLink]="['/details',movie.id,mediaType]">
+                <div class=" card-img  ">
+                    <img src={{imgeUrl+movie.poster_path}}  class="img-fluid rounded-4 " alt="">
+                 </div>
+                 <div class="card-img-bottom container">
+                     <p>{{movie.title}}</p>
+                     <div class=" position-absolute top-0  ">
+                         <p> <i class="fa fa-star text-warning"></i>{{movie.vote_average.toFixed(1)}}</p>
+                     </div>
+     
+                    </div>
+            </a>
+        </div>                   
+        </div>
+ </div>
+
+        
+        
+
+
+        <div class="py-5 text-center"> 
+            <div >
+            <a  [routerLink]="['/movies',pag]" *ngFor="let pag of pages"   >
+              <button class=" btn btn-info m-2" >{{pag}}</button>
+            </a>
+            </div>
+          </div>
+    </div>
+
+
+
+
+
+

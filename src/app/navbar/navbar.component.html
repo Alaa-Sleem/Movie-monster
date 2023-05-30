@@ -1,0 +1,59 @@
+
+<nav class="navbar  navbar-expand-sm shadow ">
+      <div class="container ">
+        <a class="navbar-brand monster " ><i class="fa-solid fa-tv fa-bounce"></i> Movie Monster</a>
+        <button class="navbar-toggler d-lg-none bg-info rounded-2 " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+         </button>
+        <div class="collapse navbar-collapse " id="collapsibleNavId">
+            <ul class="navbar-nav  me-auto mt-1 mt-lg-0 ">
+                <li *ngIf="IsLogin" class="nav-item ">
+                    <a class="nav-link rounded-2 nac-c active  "  routerLink="home" aria-current="page">Home </a>
+                </li>
+                <li *ngIf="IsLogin" class="nav-item">
+                    <a class="nav-link rounded-2 nac-c" routerLink="movies/:pag" >Movies</a>
+                </li>
+                <li *ngIf="IsLogin" class="nav-item ">
+                    <a class="nav-link rounded-2 nac-c " routerLink="tvshow/:pag"  aria-current="page">TVshows </a>
+                </li>
+                <li *ngIf="IsLogin" class="nav-item">
+                    <a class="nav-link rounded-2 nac-c" routerLink="actors"  >Actors</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mt-1 mt-lg-0  ">
+              
+                <li class="nav-item  d-flex align-items-center nac-c cursol-pointer" >
+                        <i class= " fab mx-1 fa-instagram"></i>
+                        <i class= " fab mx-1 fa-facebook"></i>
+                        <i class= " fab mx-1 fa-tiktok"></i>
+                        <i class= " fab mx-1 fa-linkedin"></i>
+                        <i class= " fab mx-1 fa-youtube"></i>
+                </li>
+               
+             
+            </ul>
+            <ul class="navbar-nav m-2 mt-1 mt-lg-0  ">
+              
+                
+                <li *ngIf="!IsLogin" class="nav-item ">
+                    <a class="nav-link rounded-2 nac-c" routerLink="signin">Login</a>
+                </li>
+                <li  *ngIf="!IsLogin" class="nav-item">
+                    <a class="nav-link rounded-2 nac-c" routerLink="signup">Register</a>
+                </li>
+                <li *ngIf="IsLogin"  class="nav-item  m-1">
+                    
+                    <a  (click)="LogOut()"  class="nav-link  btn cursor-pointer bg-info ">LogOut</a>
+                </li>
+             
+            </ul>
+          
+        </div>
+  </div>
+</nav>
+
+
+
+
+
+

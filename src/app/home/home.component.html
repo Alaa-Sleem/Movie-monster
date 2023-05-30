@@ -1,0 +1,103 @@
+
+<div class="justify-content-center mt-4">
+    <div class="container py-5">
+        <div class="row ">
+            <div class="col-md-4 p-5 ">
+                <h3 >Trending Movies <br> Right Now</h3>
+                <p class="text-primary ">Top Trending Movies BY Week </p>
+               
+             </div>
+    
+            
+            <div *ngFor="let trends of trendingMovies" class="col-md-2  position-relative   card-group ">
+                <a  [routerLink]="['/details',trends.id,trends.media_type]">
+                    <div class=" card-img  ">
+                        <img src={{imgeUrl+trends.poster_path}}  class="img-fluid rounded-4 " alt="">
+                     </div>
+                     <div class="card-img-bottom container">
+                         <p>{{trends.title}}</p>
+                         <div class=" position-absolute top-0  ">
+                             <p> <i class="fa fa-star text-warning"></i>{{trends.vote_average.toFixed(1)}}</p>
+                         </div>
+         
+                        </div>
+                </a>
+    
+    
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    
+    <div class="container py-5">
+        <div class="row ">
+            <div class="col-md-4 p-5 ">
+                <h3 >Trending TV Shows  <br> Right Now</h3>
+                <p class="text-primary ">Top Trending TV Shows BY Week </p>
+               
+             </div>
+    
+            
+            <div *ngFor="let trends of trendingTv" class="col-md-2  position-relative   card-group ">
+    
+                <a [routerLink]="['/details',trends.id,trends.media_type]" >
+                <div class=" card-img  ">
+                   <img src={{imgeUrl+trends.poster_path}}  class="img-fluid rounded-4 " alt="">
+                </div>
+                <div class="card-img-bottom container">
+                    <p>{{trends.name}}</p>
+                    <div class=" position-absolute top-0  ">
+                        <p> <i class="fa fa-star text-warning"></i>{{trends.vote_average.toFixed(1)}}</p>
+                    </div>
+    
+                   </div>
+                </a>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    
+    
+    
+    <div class="container py-5">
+        <div class="row ">
+            <div class="col-md-4 p-5 ">
+                <h3 > Most Famous Actors  <br> Right Now</h3>
+                <p class="text-primary ">Top Trending  BY Week </p>
+               
+             </div>
+    
+            
+            <div *ngFor="let trends of trendingActors" class="col-md-2  position-relative   card-group ">
+                
+                <a [routerLink]="['/details',trends.id,trends.media_type]">
+    
+                    <div class=" card-img  ">
+                        <img src={{imgeUrl+trends.profile_path}}  class="img-fluid rounded-4 " alt="">
+                     </div>
+                     <div class="card-img-bottom container">
+                         <p>{{trends.name}}</p>
+         
+                        </div>
+                        
+                </a>
+    
+           
+    
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    
+ 
+    
+</div>
