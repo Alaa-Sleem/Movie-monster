@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-9 align-items-center d-flex">
                 <div class="">
-                    <h3 *ngIf="details.title">{{details.title}}  
+                    <h3  *ngIf="details.title">{{details.title}}  
                        <span *ngIf="details.release_date" class="text-muted">({{details.release_date.slice(0,4)}})</span> 
                        <div *ngIf="details.vote_average"><i class="fa fa-star text-warning"></i>{{details.vote_average.toFixed(1)}}</div>
                         </h3>
@@ -63,7 +63,7 @@
                                 <img src={{imgeUrl+items.poster_path}}  class="img-fluid rounded-4 " alt="">
                              </div>
                              <div class="card-img-bottom container">
-                                 <p>{{items.title}}{{items.name}}</p>
+                                 <p  class="style" >{{items.title}}{{items.name}}</p>
                                  <div class=" position-absolute top-0  ">
                                      <p> <i class="fa fa-star text-warning"></i>{{items.vote_average.toFixed(1)}}</p>
                                  </div>

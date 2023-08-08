@@ -95,3 +95,25 @@ a
 {
     background-color: #0dcaf0 !important;
 }
+
+
+
+
+@media screen  and  (min-width: 320px ) and  (max-width: 480px ){
+    
+    .monster
+    {
+     justify-content: center;
+    font-size: small;
+    }
+
+    .monster h1,h2
+{
+    font-size: 40px;
+}
+
+.style 
+{
+    font-size: 24px;
+}
+}
